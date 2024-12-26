@@ -21,7 +21,7 @@ public class BookmarkController {
 
     private final UserService userService;
     private final RecipeService recipeService;
-    private final BookmarkServie bookmarkServie;
+    private final BookmarkService bookmarkService;
 
 
     // 유저의 북마크 목록 조회
@@ -30,7 +30,7 @@ public class BookmarkController {
         Optional<User> result = userService.findById(auth.getName());
         User user = result.get();
 
-        List<Bookmark> bookmarkList = bookmarkServie.findAllByUser(user);
+        List<Bookmark> bookmarkList = bookmarkService.findAllByUser(user);
 
         List<Recipe> recipeList = new ArrayList<>();
         for (int i = 0; i < bookmarkList.size(); i++) {
@@ -55,8 +55,8 @@ public class BookmarkController {
             User user = userResult.get();
             Recipe recipe = recipeResult.get();
 
-            if(!bookmarkServie.existByUserAndRecipe(user,recipe)){
-                bookmarkServie.saveBookmark(user, recipe);
+            if(!bookmarkService.existByUserAndRecipe(user,recipe)){
+                bookmarkService.saveBookmark(user, recipe);
             }
         }
 
@@ -73,7 +73,7 @@ public class BookmarkController {
             User user = userResult.get();
             Recipe recipe = recipeResult.get();
 
-            bookmarkServie.deleteByUserAndRecipe(user,recipe);
+            bookmarkService.deleteByUserAndRecipe(user,recipe);
         }
         return ResponseEntity.noContent().build(); // 204 No Content 응답
     }

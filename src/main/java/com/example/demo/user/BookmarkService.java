@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class BookmarkServie {
+public class BookmarkService {
 
     private final BookmarkRepository bookmarkRepository;
 

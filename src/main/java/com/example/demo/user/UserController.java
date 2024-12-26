@@ -118,7 +118,7 @@ public class UserController {
     }
 
     @PostMapping("/deleteAccount")
-    String deleteAccount(Model model, Authentication auth){
+    String deleteAccount(Authentication auth){
         Optional<User> result = userService.findById(auth.getName());
 
         if(result.isPresent()){

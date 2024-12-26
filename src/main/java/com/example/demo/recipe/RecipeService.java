@@ -19,7 +19,7 @@ public class RecipeService {
     }
 
     public Page<Recipe> findPageBy(int start, int size){
-        Page<Recipe> recipes = recipeRepository.findPageBy(PageRequest.of(0, 4));
+        Page<Recipe> recipes = recipeRepository.findPageBy(PageRequest.of(start, size));
         return recipes;
     }
 
