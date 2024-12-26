@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Page</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{ navbar.html::navbar }"></div>
+
+    <div class="detail_container">
+        <div class="detail">
+            <h1>주재료 구매 페이지</h1>
+            <h3>주재료: <span th:text="${ingredientName}">주재료 이름</span></h3>
+            <h4>판매자: <span th:text="${seller}">판매자 이름</span></h4>
+            <h4>구매 링크: <span th:text="${purchaseLink}">링크</span></h4>
+
+        </div>
+    </div>
+
+<!-- Footer -->
+<div th:replace="~{footer.html::footer}"></div>
+</body>
+</html>

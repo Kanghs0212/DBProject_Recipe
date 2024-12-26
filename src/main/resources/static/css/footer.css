@@ -1,0 +1,16 @@
+/* footer 부분 */
+footer {
+    background-color: #3071F2;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

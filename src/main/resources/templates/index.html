@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피 검색</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{ navbar.html::navbar }"></div>
+<!-- Main Content -->
+<main>
+    <h1>레시피가 궁금한 요리를 검색해보세요!</h1>
+    <form class="search-bar" action="/search" method="get">
+        <input type="text" name="keyword" placeholder="Search for recipes..." required>
+        <button type="submit">검색</button>
+    </form>
+
+    <div class="recipe-list" style="margin-top:50px;">
+        <div class="recipe-card"
+             th:each="recipe : ${recipes}"
+             th:onclick="'location.href=\'/detail/' + ${recipe.rid} + '\''">
+            <h2 th:text="${recipe.recipeName}">레시피 제목</h2>
+            <p th:text="'이 레시피로 ' + ${recipe.recipeName} + '를 쉽게 만들어보세요!'">간단한 설명</p>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<div th:replace="~{footer.html::footer}"></div>
+
+</body>
+</html>

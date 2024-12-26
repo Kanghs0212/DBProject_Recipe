@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* 메인화면 검색바 */
+main {
+    margin-top: -100px;
+    padding: 20px;
+    text-align: center;
+}
+.search-bar {
+    margin: 20px 0;
+}
+.search-bar input {
+    border-radius: 8px;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+}
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* 큰 컨테이너 스타일 */
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* 네비게이션 바 높이를 제외한 전체 화면 높이 */
+    background-color: #f0f0f0;
+    margin-top: 60px; /* 네비게이션 바 높이만큼 여백 추가 */
+}
+
+/* 레시피 카드 리스트 */
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈을 허용하여 반응형으로 만들기 */
+    justify-content: center;
+    gap: 20px; /* 카드 간격 */
+    margin-top: 30px;
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+}

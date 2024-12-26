@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Menu</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{navbar.html::navbar}"></div>
+    <div class="detail_container">
+        <div class="detail">
+            <h2>북마크 페이지</h2>
+            <ol class="bookmark-list">
+                <li th:each="recipe : ${recipes}" class="bookmark-item">
+                    <a th:href="@{/detail/{rid}(rid=${recipe.Rid})}" class="recipe-name" th:text="${recipe.recipeName}">요리</a>
+                    <button class="delete-btn" th:attr="data-recipe-id=${recipe.Rid}" onclick="deleteBookmark(this)">삭제</button>
+                </li>
+            </ol>
+        </div>
+    </div>
+<div th:replace="~{footer.html::footer}"></div>
+<script>
+    function deleteBookmark(button) {
+        // 버튼에 설정된 data-recipe-id 속성에서 ID 가져오기
+        const recipeId = button.getAttribute("data-recipe-id");
+        const url = `/deleteBookmark/${recipeId}`;
+
+        // DELETE 요청 보내기
+        fetch(url, { method: "DELETE" })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "/mymenu";
+                } else {
+                    console.error("Failed to delete bookmark.");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+         }
+</script>
+</body>
+</html>

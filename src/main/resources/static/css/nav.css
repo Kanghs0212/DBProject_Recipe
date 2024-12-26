@@ -1,0 +1,55 @@
+
+/* 상단 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3071F2;
+    color: white;
+    padding: 10px 20px;
+    position: fixed; /* 고정 */
+    top: 0; /* 화면의 최상단에 위치 */
+    width: 100%; /* 화면 너비에 맞게 확장 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+.navbar .logo {
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.navbar .menu img {
+    width: 20px;
+    height: 20px;
+    margin-right:20px;
+}
+
+.navbar a {
+    color: white; /* 기본 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.navbar a:visited {
+    color: white; /* 방문 후에도 색상 유지 */
+}
+
+.navbar a:hover {
+    color: white; /* 마우스를 올렸을 때 색상 유지 */
+}
+
+.navbar a:active {
+    color: white; /* 클릭 시 색상 유지 */
+}

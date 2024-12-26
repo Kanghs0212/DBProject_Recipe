@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Detail</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body style="height: 130vh;">
+<div th:replace="~{ navbar.html::navbar }"></div>
+    <div class="detail_container">
+        <div class="detail">
+            <h4>레시피 상세 페이지</h4>
+            <a th:href="@{/addBookmark/{rid}(rid=${recipe.Rid})}">
+                <button class="purchase-btn">북마크</button>
+            </a>
+
+            <h4 th:text="${recipe.recipeName}">레시피 제목</h4>
+
+            <p th:text="'칼로리: ' + ${recipe.calories} + 'kcal'">칼로리 정보</p>
+            <p th:text="${recipe.description}">레시피 설명</p>
+            
+            <h4>요리 단계</h4>
+            <ol>
+                <li th:each="step : ${recipeSteps}" th:text="${step.description}">요리 단계 내용</li>
+            </ol>
+            
+            <!-- 구매하기 버튼, 클릭 시 새 창에서 열림 -->
+            <a th:href="@{/detail/{id}/purchase(id=${recipe.rid})}">
+                <button class="purchase-btn">주재료 구매하기</button>
+            </a>
+        </div>
+    </div>
+<!-- Footer -->
+<div th:replace="~{footer.html::footer}"></div>
+<script>
+
+</script>
+</body>
+</html>

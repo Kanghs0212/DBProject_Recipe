@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* 디테일 페이지*/
+.detail_container {
+    margin-top: -70px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+.detail h4 {
+    margin: 20px 0 10px;
+    color: #333;
+}
+.detail p {
+    color: #666;
+    line-height: 1.5;
+}
+ol {
+    padding-left: 20px;
+}
+ol li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.purchase-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 모달 컨테이너 */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* 모달 창 스타일 */
+.modal {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+/* 입력 필드와 버튼 스타일 */
+.modal input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3071F2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #2056B2;
+}
+
+/* 회원가입 링크 스타일 */
+.modal p {
+    margin-top: 15px;
+}
+
+.modal a {
+    color: rgb(0,0,200);
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 12px;
+    color: gray;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+/* 검색결과 페이지 */
+.search-container {
+    margin-top: -100px;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+.search-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.search-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.search-container ul li {
+    margin: 10px 0;
+}
+.search-container ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-container ul li a:hover {
+    text-decoration: underline;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #555;
+    text-decoration: none;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+/* 비밀번호 및 전화번호 변경 컨테이너 */
+.change_wrapper {
+    display: flex;
+    justify-content: space-around; /* 양쪽에 여유 공간 추가 */
+    align-items: flex-start;
+    margin-top: -50px;
+    padding: 40px;
+    gap: 50px; /* 두 창 사이의 간격 */
+    width: 90%;
+}
+
+.password_container,
+.phone_container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* 각 창의 가로 폭 확대 */
+    max-width: 1000px;
+}
+
+.password_change h2,
+.phone_change h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit_button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit_button:hover {
+    background-color: #0056b3;
+}
+/* 계정 삭제 컨테이너 */
+.delete_account_container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.delete_account_container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.delete_account_container .form_group {
+    margin-bottom: 20px;
+}
+
+.delete_account_container .form_group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.delete_account_container .form_group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.delete_button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete_button:hover {
+    background-color: #e60000;
+}
+/* 북마크 리스트 */
+.bookmark-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.bookmark-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.bookmark-item:hover {
+    background-color: #f1f1f1;
+}
+
+.recipe-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    flex-grow: 1;
+    text-decoration: none; /* 밑줄 제거 */
+     cursor: pointer;
+}
+.recipe-name:visited {
+    color: #333;
+    text-decoration: none;
+}
+.recipe-name:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+.recipe-name:active {
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e43e3e;
+    transform: scale(1.05);
+}
+
+.delete-btn:active {
+    background-color: #cc3636;
+    transform: scale(1);
+}

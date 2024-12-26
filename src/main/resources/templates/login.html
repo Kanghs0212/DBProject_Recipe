@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="modal-container">
+    <div class="modal">
+        <h2>🍳 요리모아 🍴</h2>
+        <h2>오신걸 환영합니다!</h2>
+        <h4>로그인하세요</h4>
+        <div th:if="${param.error}">
+            <h4 style="color: rgb(220, 53, 69);">아이디 또는 비밀번호가 틀렸습니다.</h4>
+        </div>
+        <form method="POST" action="/login">
+            <input name="username" placeholder="아이디">
+            <input name="password" type="password" placeholder="비밀번호">
+            <button type="submit">로그인</button>
+        </form>
+        <p>저희 사이트는 처음이십니까? <a href="/register">회원가입</a></p>
+    </div>
+</div>
+</body>
+</html>

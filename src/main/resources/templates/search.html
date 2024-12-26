@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>레시피 검색</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{ navbar.html::navbar }"></div>
+    <div class="search-container">
+        <h1>검색 결과 "<span th:text="${keyword}"></span>"</h1>
+        <ul>
+            <li th:if="${recipes == null || recipes.isEmpty()}">검색된 레시피가 없습니다.</li>
+            <li th:each="recipe : ${recipes}">
+                <a th:href="@{/detail/{id}(id=${recipe.getRid()})}" th:text="${recipe.getRecipeName()}"></a>
+            </li>
+        </ul>
+        <a class="back-link" href="/">메인화면으로 돌아갑니다.</a>
+    </div>
+<!-- Footer -->
+<div th:replace="~{footer.html::footer}"></div>
+</body>
+</html>
