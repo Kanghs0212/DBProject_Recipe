@@ -80,6 +80,8 @@ public class RecipeController {
 
     @GetMapping("/")
     public String index(Model model){
+        
+        // 메인화면
         Page<Recipe> recipes = recipeService.findPageBy(0,4);
         model.addAttribute("recipes", recipes);
         return "index.html";

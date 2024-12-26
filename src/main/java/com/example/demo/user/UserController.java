@@ -26,6 +26,7 @@ public class UserController {
     String loginCheck(String uid, String password){
         Optional<User> result = userService.findById(uid);
 
+        // 해당 입력한 id와 일치하는 유저가 존재시, 해당 유저의 비밀번호와 대조
         if(result.isPresent()){
             User user = result.get();
 
@@ -43,6 +44,7 @@ public class UserController {
 
     @GetMapping("/index")
     String index(Authentication auth, Model model){
+        // 메인화면으로 넘어갈 시 auth의 정보를 삽입
         model.addAttribute(auth);
         return "index.html";
     }
@@ -69,8 +71,10 @@ public class UserController {
 
         if(result.isPresent()){
             User user = result.get();
+            // 만약 사용자가 입력한 비밀번호가 실제 비밀번호와 일치하면
             if(passwordEncoder.matches(currentPassword, user.getPassword())){
 
+                // 새로운 비밀번호로 유저 정보 업데이트
                 userService.updateUserPassword(newPassword, user);
 
                 model.addAttribute("message", "비밀번호가 변경되었습니다.");
@@ -93,8 +97,10 @@ public class UserController {
         if(result.isPresent()){
             User user = result.get();
 
+            // 만약 사용자가 입력한 비밀번호가 실제 비밀번호와 일치하면
             if(passwordEncoder.matches(password, user.getPassword())){
 
+                // 전화번호 업데이트
                 userService.updateUserPhoneNumber(newPhone, user);
 
                 model.addAttribute("message", "전화번호가 변경되었습니다.");
