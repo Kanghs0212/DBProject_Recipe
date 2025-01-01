@@ -1,4 +1,4 @@
-# 레시피 검색 사이트
+![image](https://github.com/user-attachments/assets/6dec2485-f5d2-4680-bbe7-fc7f03e2231f)# 레시피 검색 사이트
 ## 데이터베이스 프로젝트
 
 ### 1. 프로젝트 주제
@@ -32,4 +32,22 @@
 
 
 - 위에서 정의한 구체적인 요구사항에 기반하여, ER 다이어그램을 작성해보았다.
+1) 사용자(다) - 레시피(다)
+- 사이에는 Bookmark 관계로 이어져있으며, 다대다 관계이므로 해당 관계를 테이블화 하여야 한다.
+3) 레시피(일) - 레시피단계(다)
+- 사이에는 Reference 관계로 이어짐
+4) 레시피(다) - 메인재료(일)
+- 사이에는 Use 관계로 이어짐
+5) 메인재료(일) - 구매링크(일)
+- 사이에는 Reference 관계로 이어짐
+
+&nbsp;&nbsp;
+
+#### 3) 데이터베이스 스키마
+![image](https://github.com/user-attachments/assets/326042f6-9d14-4b81-ae1d-47cf9f5a800a)
+&nbsp;
+![image](https://github.com/user-attachments/assets/3fedf6c8-2045-46f1-b38c-6d03c468bd52)
+&nbsp;
+![image](https://github.com/user-attachments/assets/0d10b6b4-f2fd-4e06-b483-d1906c2ee302)
+&nbsp;
 
