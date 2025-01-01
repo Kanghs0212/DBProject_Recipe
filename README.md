@@ -44,10 +44,18 @@
 &nbsp;&nbsp;
 
 #### 3) 데이터베이스 스키마
-![image](https://github.com/user-attachments/assets/326042f6-9d14-4b81-ae1d-47cf9f5a800a)
+![image](https://github.com/user-attachments/assets/83ecf6e0-e328-400d-b611-cab369c6ca27)
 &nbsp;
 ![image](https://github.com/user-attachments/assets/3fedf6c8-2045-46f1-b38c-6d03c468bd52)
+- 해당 Bookmark 테이블은 사용자와 레시피 다대다 관계 사이에 존재하는 중간 테이블로써, 각 사용자와 레시피의 주키를 복합키이자 외래키로 사용한다.
 &nbsp;
 ![image](https://github.com/user-attachments/assets/0d10b6b4-f2fd-4e06-b483-d1906c2ee302)
 &nbsp;
+
+##### 테이블의 정규화 상태
+![image](https://github.com/user-attachments/assets/51e19d68-9fe3-4f73-ab9c-4fc89b2607a4)
+
+- 위에서 데이터베이스 스키마를 통해, 모든 테이블들의 속성들이 원자적이며, non-key 속성들이 주키에 완전종속되며, 마지막으로 이행종속이 존재하지 않으므로 전부 제 3정규화를 만족시킨다.
+- 여기서 모든 테이블들의 함수 종속(Functional Dependency)를 확인해보면, 모든 결정자들은 후보키(주키)가 되므로 보이스-코드 정규화를 만족한다는 것을 알 수 있다.(BCNF)
+
 
