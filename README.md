@@ -59,5 +59,19 @@
 
 - 위에서 데이터베이스 스키마를 통해, 모든 테이블들의 속성들이 원자적이며, non-key 속성들이 주키에 완전종속되며, 마지막으로 이행종속이 존재하지 않으므로 전부 제 3정규화를 만족시킨다.
 - 여기서 모든 테이블들의 함수 종속(Functional Dependency)를 확인해보면, 모든 결정자들은 후보키(주키)가 되므로 보이스-코드 정규화를 만족한다는 것을 알 수 있다.(BCNF)
+&nbsp;
 
+### 웹사이트 로드맵
+![스크린샷 2024-11-29 180804](https://github.com/user-attachments/assets/82c36e2c-4d30-43f3-9baa-9471ec366061)
 
+&nbsp;
+
+**개발 언어 및 환경**
+1. Web Server
+- Java Spring Boot
+&nbsp;
+2. DataBase
+- Oracle (putty의 sqlplus를 통해 학교 데이터베이스 접근)
+&nbsp;
+3. Language
+- HTML, CSS, JavaScript, Java
