@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6dec2485-f5d2-4680-bbe7-fc7f03e2231f)# 레시피 검색 사이트
+# 레시피 검색 사이트
 ## 데이터베이스 프로젝트
 
 ### 1. 프로젝트 주제
