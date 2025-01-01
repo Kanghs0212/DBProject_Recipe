@@ -70,14 +70,8 @@
 
 &nbsp;
 
-**1. Web Server** - Java Spring Boot
-
-&nbsp;&nbsp;
-
-**2. DataBase** - Oracle (putty의 sqlplus를 통해 학교 데이터베이스 접근)
-
-&nbsp;&nbsp;
-
-**3. Language** - HTML, CSS, JavaScript, Java
+- **1. Web Server** - Java Spring Boot
+- **2. DataBase** - Oracle (putty의 sqlplus를 통해 학교 데이터베이스 접근)
+- **3. Language** - HTML, CSS, JavaScript, Java
 
 &nbsp;&nbsp;
