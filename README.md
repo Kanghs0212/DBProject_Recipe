@@ -47,6 +47,7 @@
 ![image](https://github.com/user-attachments/assets/83ecf6e0-e328-400d-b611-cab369c6ca27)
 &nbsp;
 ![image](https://github.com/user-attachments/assets/3fedf6c8-2045-46f1-b38c-6d03c468bd52)
+&nbsp;
 - 해당 Bookmark 테이블은 사용자와 레시피 다대다 관계 사이에 존재하는 중간 테이블로써, 각 사용자와 레시피의 주키를 복합키이자 외래키로 사용한다.
 &nbsp;
 ![image](https://github.com/user-attachments/assets/0d10b6b4-f2fd-4e06-b483-d1906c2ee302)
