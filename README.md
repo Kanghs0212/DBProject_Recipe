@@ -67,11 +67,8 @@
 &nbsp;
 
 **개발 언어 및 환경**
-1. Web Server
-- Java Spring Boot
+**1. Web Server** - Java Spring Boot
 &nbsp;
-2. DataBase
-- Oracle (putty의 sqlplus를 통해 학교 데이터베이스 접근)
+**2. DataBase** - Oracle (putty의 sqlplus를 통해 학교 데이터베이스 접근)
 &nbsp;
-3. Language
-- HTML, CSS, JavaScript, Java
+**3. Language** - HTML, CSS, JavaScript, Java
